@@ -7,7 +7,7 @@ const res = require("express/lib/response");
 
 const app = express();
 
-app.use(express.static("pubic"));
+app.use(express.static("Pubic"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function(req, res) {
@@ -48,7 +48,7 @@ app.post("/", function(req, res) {
     request.end();
 });
 app.post("/failure", function(req, res) {
-    res.redirect("/")
+    res.redirect("/");
 })
 app.listen(process.env.PORT || 3000, () => {
     console.log("the server is reunning on port 3000");
